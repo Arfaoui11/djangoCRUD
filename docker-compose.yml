@@ -1,0 +1,31 @@
+---
+version: '3.7'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - CONDA_ENV_NAME=wevioo_doc
+    depends_on:
+      - postgres-djangoo
+  postgres-djangoo:
+    container_name: postgres-djangoo
+    image: postgres
+    environment:
+      POSTGRES_DB: django-service
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      PGDATA: /data/postgres
+    volumes:
+      - postgres-djangoo:/data/postgres
+    ports:
+      - "5432:5432"
+    restart: always
+volumes:
+  postgres-djangoo:
+
