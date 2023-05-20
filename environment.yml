@@ -28,12 +28,7 @@ dependencies:
       - persistence==4.0.post1
       - persistent==5.0
       - pip==23.1.2
-      - pycryptodome==3.17
-      - pyrsistent==0.19.3
       - python-dateutil==2.8.2
-      - python-docx==0.8.11
       - python-dotenv==1.0.0
-      - python-gettext==5.0
       - sqlparse==0.4.4
-      - sympy==1.12
 prefix: /opt/anaconda3/envs/wevioo_doc
