@@ -10,7 +10,7 @@ services:
     volumes:
       - .:/app
     environment:
-      - DJANGO_SETTINGS_MODULE=djangoCRUD.settings.base.py
+      - DJANGO_SETTINGS_MODULE=djangoCRUD.settings.base
       - CONDA_ENV_NAME=wevioo_doc
     depends_on:
       - postgres-djangoo
